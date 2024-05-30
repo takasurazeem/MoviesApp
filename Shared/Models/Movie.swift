@@ -1,4 +1,10 @@
-
+//
+//  Movie.swift
+//  MoviesApp
+//
+//  Created by Takasur Home on 30/05/2024.
+//  Copyright © 2024 Takasur Azeem. All rights reserved.
+//
 
 import Foundation
 
@@ -10,7 +16,6 @@ struct MovieResponse: Decodable {
     }
 }
 
-
 struct Movie: Decodable {
     let title: String
     let poster: String
@@ -21,5 +26,5 @@ struct Movie: Decodable {
         case poster = "Poster"
         case imdbId = "imdbID"
     }
-    
 }
+
