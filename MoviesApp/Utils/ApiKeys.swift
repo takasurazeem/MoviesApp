@@ -14,6 +14,5 @@ extension Constants {
         /// Obtain your OMDB Key from here: https://www.omdbapi.com/apikey.aspx
         static var omdbIdKey: String {
             fatalError("Return your API key here.")
-        }
     }
 }
