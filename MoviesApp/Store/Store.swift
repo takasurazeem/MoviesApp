@@ -19,6 +19,13 @@ struct MoviesState: ReduxState {
 
 protocol Action { }
 
+struct FetchMovies: Action {
+    let search: String
+}
+
+struct SetMovies: Action {
+    let movies: [Movie]
+}
 
 class Store<StoreState: ReduxState>: ObservableObject {
     

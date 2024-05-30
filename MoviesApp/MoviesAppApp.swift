@@ -11,7 +11,11 @@ import SwiftUI
 struct MoviesAppApp: App {
     var body: some Scene {
        
-        let store = Store(reducer: appReducer, state: AppState(), middlewares: [moviesMiddleware()])
+        let store = Store(
+            reducer: appReducer,
+            state: AppState(),
+            middlewares: [moviesMiddleware()]
+        )
         
         WindowGroup {
             ContentView().environmentObject(store)
