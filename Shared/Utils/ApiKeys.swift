@@ -10,6 +10,10 @@ import Foundation
 
 extension Constants {
     struct ApiKeys {
-        static let omdbIdKey = ""
+        
+        /// Obtain your OMDB Key from here: https://www.omdbapi.com/apikey.aspx
+        static var omdbIdKey: String {
+            fatalError("Set an API Key.")
+        }
     }
 }
