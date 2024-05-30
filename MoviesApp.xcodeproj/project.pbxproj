@@ -20,7 +20,6 @@
 		76FE40612C08519500AD320F /* MoviesMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FE404B2C08519400AD320F /* MoviesMiddleware.swift */; };
 		76FE40622C08519500AD320F /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FE404C2C08519400AD320F /* Store.swift */; };
 		76FE40632C08519500AD320F /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FE404E2C08519400AD320F /* AppReducer.swift */; };
-		76FE40642C08519500AD320F /* MoviesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FE404F2C08519400AD320F /* MoviesReducer.swift */; };
 		76FE40652C08519500AD320F /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FE40512C08519400AD320F /* RatingView.swift */; };
 		76FE40662C08519500AD320F /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FE40522C08519400AD320F /* MovieDetailsView.swift */; };
 		76FE40672C08519500AD320F /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FE40532C08519400AD320F /* URLImage.swift */; };
@@ -30,6 +29,7 @@
 		76FE406B2C08519500AD320F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FE40592C08519500AD320F /* Movie.swift */; };
 		76FE406C2C08519500AD320F /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FE405A2C08519500AD320F /* MovieDetail.swift */; };
 		76FE406D2C08519500AD320F /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FE405C2C08519500AD320F /* Webservice.swift */; };
+		76FE406F2C0859F100AD320F /* MoviesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FE406E2C0859F100AD320F /* MoviesReducer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,6 @@
 		76FE404B2C08519400AD320F /* MoviesMiddleware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesMiddleware.swift; sourceTree = "<group>"; };
 		76FE404C2C08519400AD320F /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		76FE404E2C08519400AD320F /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
-		76FE404F2C08519400AD320F /* MoviesReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesReducer.swift; sourceTree = "<group>"; };
 		76FE40512C08519400AD320F /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		76FE40522C08519400AD320F /* MovieDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
 		76FE40532C08519400AD320F /* URLImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 		76FE40592C08519500AD320F /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		76FE405A2C08519500AD320F /* MovieDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		76FE405C2C08519500AD320F /* Webservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		76FE406E2C0859F100AD320F /* MoviesReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				76FE404E2C08519400AD320F /* AppReducer.swift */,
-				76FE404F2C08519400AD320F /* MoviesReducer.swift */,
+				76FE406E2C0859F100AD320F /* MoviesReducer.swift */,
 			);
 			path = Reducers;
 			sourceTree = "<group>";
@@ -386,6 +386,7 @@
 				76FE406B2C08519500AD320F /* Movie.swift in Sources */,
 				76FE40632C08519500AD320F /* AppReducer.swift in Sources */,
 				76FE406D2C08519500AD320F /* Webservice.swift in Sources */,
+				76FE406F2C0859F100AD320F /* MoviesReducer.swift in Sources */,
 				76FE40672C08519500AD320F /* URLImage.swift in Sources */,
 				76FE40622C08519500AD320F /* Store.swift in Sources */,
 				76FE40662C08519500AD320F /* MovieDetailsView.swift in Sources */,
@@ -394,7 +395,6 @@
 				76FE405E2C08519500AD320F /* View+Extensions.swift in Sources */,
 				76FE406C2C08519500AD320F /* MovieDetail.swift in Sources */,
 				7616674C2C08452800F36319 /* MoviesAppApp.swift in Sources */,
-				76FE40642C08519500AD320F /* MoviesReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

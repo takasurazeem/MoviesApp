@@ -10,7 +10,11 @@ typealias Middleware<StoreState: ReduxState> = (StoreState, Action, @escaping Di
 protocol ReduxState { }
 
 struct AppState: ReduxState {
-   
+    var movies = MoviesState()
+}
+
+struct MoviesState: ReduxState {
+    let movies: [Movie] = []
 }
 
 protocol Action { }
