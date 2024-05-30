@@ -90,3 +90,4 @@ fastlane/test_output
 iOSInjectionProject/
 .DS_Store
 Shared/Utils/ApiKeys.swift
+MoviesApp/Utils/ApiKeys.swift
