@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -267,7 +267,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
-				ORGANIZATIONNAME = "Takasur Azeem";
+				ORGANIZATIONNAME = "JABERI Mohamed";
 				TargetAttributes = {
 					342978C6250FEC1500F20610 = {
 						CreatedOnToolsVersion = 12.0;
@@ -278,7 +278,7 @@
 				};
 			};
 			buildConfigurationList = 342978BE250FEC1200F20610 /* Build configuration list for PBXProject "MoviesApp" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
