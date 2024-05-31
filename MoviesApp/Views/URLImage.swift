@@ -13,22 +13,21 @@ struct URLImage: View {
     }
     
     var body: some View {
-        
         if let imageData = self.imageDownloader.downloadedData {
-            
             let img = UIImage(data: imageData)
-            return
-                VStack {
-                    Image(uiImage: img!).resizable()
-            }
-            
+            return AnyView(
+                Image(uiImage: img!)
+                    .resizable()
+            )
         } else {
-            return VStack {
-                Image("placeholder").resizable()
-            }
+            return AnyView(
+                Image("placeholder")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            )
         }
-        
     }
+
 }
 
 struct URLImage_Previews: PreviewProvider {

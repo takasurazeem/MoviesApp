@@ -6,6 +6,8 @@ struct ContentView: View {
     
     @EnvironmentObject var store: Store<AppState>
     @State private var search: String = ""
+    let debouncer = Debouncer(delay: 0.3) // Adjust delay as needed
+
     
     struct Props {
         let movies: [Movie]
@@ -21,9 +23,19 @@ struct ContentView: View {
     var body: some View {
         let props = map(state: store.state.movies)
         return VStack {
-            TextField("Seach for movie name", text: $search)
-                .textFieldStyle(.roundedBorder)
-                .padding()
+            TextField("Seach for movie name", text: $search, onCommit: {
+                props.onSearch(search)
+            })
+            .textFieldStyle(.plain)
+            .keyboardType(.alphabet)
+            .padding()
+            .onChange(of: search) { oldValue, newValue in
+                if newValue.count > 2 {
+                    debouncer.run {
+                        props.onSearch(newValue)
+                    }
+                }
+            }
             List(props.movies) { movie in
                 MovieCell(movie: movie)
             }
@@ -31,9 +43,6 @@ struct ContentView: View {
         }
         .navigationTitle("Movies")
         .embedInNavigationView()
-        .onAppear {
-            props.onSearch("lion king")
-        }
     }
 }
 
