@@ -23,11 +23,17 @@ struct ContentView: View {
         return VStack {
             TextField("Seach for movie name", text: $search)
                 .textFieldStyle(.roundedBorder)
+                .padding()
             List(props.movies) { movie in
-                Text(movie.title)
+                MovieCell(movie: movie)
             }
+            .listStyle(PlainListStyle())
         }
-        .padding()
+        .navigationTitle("Movies")
+        .embedInNavigationView()
+        .onAppear {
+            props.onSearch("lion king")
+        }
     }
 }
 
@@ -48,6 +54,12 @@ struct MovieCell: View {
     let movie: Movie
         
     var body: some View {
-        EmptyView()
+        HStack(alignment: .top) {
+            URLImage(url: movie.poster)
+                .frame(width: 100, height: 125)
+                .cornerRadius(10)
+            
+            Text(movie.title)
+        }
     }
 }
