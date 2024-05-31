@@ -16,10 +16,14 @@ struct MovieResponse: Decodable {
     }
 }
 
-struct Movie: Decodable {
+struct Movie: Decodable, Identifiable {
     let title: String
     let poster: String
     let imdbId: String
+    
+    var id: String {
+        imdbId
+    }
     
     private enum CodingKeys: String, CodingKey {
         case title = "Title"
