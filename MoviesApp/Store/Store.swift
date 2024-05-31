@@ -14,7 +14,7 @@ struct AppState: ReduxState {
 }
 
 struct MoviesState: ReduxState {
-    let movies: [Movie] = []
+    var movies: [Movie] = []
 }
 
 protocol Action { }
