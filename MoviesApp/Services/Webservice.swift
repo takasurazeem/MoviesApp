@@ -27,4 +27,21 @@ class Webservice {
         }
     }
     
+    func getMovieDetailsBy(imdbID: String) async throws -> MovieDetail {
+        guard let movieDetailsURL = URL(string: Constants.Urls.urlForMovieDetailsByImdbId(imdbId: imdbID)) else { throw NetworkError.badURL }
+        return try await withCheckedThrowingContinuation { continuation in
+            URLSession.shared.dataTask(with: movieDetailsURL) { data, response, error in
+                guard let data, error == nil else {
+                    continuation.resume(throwing: NetworkError.noData)
+                    return
+                }
+                do {
+                    let movieDetailsResponse = try JSONDecoder().decode(MovieDetail.self, from: data)
+                    continuation.resume(returning: movieDetailsResponse)
+                } catch {
+                    continuation.resume(throwing: NetworkError.decodingError)
+                }
+            }.resume()
+        }
+    }
 }
