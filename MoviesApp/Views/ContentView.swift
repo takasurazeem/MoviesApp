@@ -37,7 +37,12 @@ struct ContentView: View {
                 }
             }
             List(props.movies) { movie in
-                MovieCell(movie: movie)
+                NavigationLink {
+                    MovieDetailsView(movie: movie)
+                } label: {
+                    MovieCell(movie: movie)
+                }
+
             }
             .listStyle(PlainListStyle())
         }
